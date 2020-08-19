@@ -12,7 +12,7 @@ client.events = new Map();
 client.mongoose = require('./utils/mongoose');
 
 client.mongoose.init();
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
 
 
 (async function loadCommands(dir = 'commands') {
