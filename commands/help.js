@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
             .addFields(
                 {
                     name: '方法一 （指定主题，缩小查找范围）',
-                    value: '输入 `?hailuo <编程语言/主题> [关键字]` '
+                    value: '输入 `?hailuo <主题> [关键字]` '
                 },
                 {
                     name: '方法二（范围模糊搜索）',
