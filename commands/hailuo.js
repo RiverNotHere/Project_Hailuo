@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
         }).then(res => {
             console.log(res);
 
-            if(res.length <= 0) message.reply(`没有在分类 ${cate} 中找到有关 ${keywords} 的内容¯\_(ツ)_/¯`);
+            if(res.length <= 0) {message.reply(`没有在分类 ${cate} 中找到有关 ${keywords} 的内容¯\_(ツ)_/¯`); return;}
 
             let searchRes = new discord.MessageEmbed()
                 .setTitle('神奇海螺回应了你的请求o(^▽^)o')
@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
 
             message.channel.awaitMessages(filter, {
                 max: 1
-            }).then(collected => {
+            }).then(collected => { 
 
                 console.log(collected.first().content);
 
@@ -73,7 +73,7 @@ module.exports.run = async (client, message, args) => {
         }).then(res => {
             console.log(res);
 
-            if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的内容¯\_(ツ)_/¯`);
+            if(res.length <= 0) {message.reply(`没有找到有关 ${keywords} 的内容¯\_(ツ)_/¯`); return;}
 
             let searchRes = new discord.MessageEmbed()
                 .setTitle('神奇海螺回应了你的请求o(^▽^)o')

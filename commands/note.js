@@ -17,7 +17,7 @@ var noteEvt = require('../events/note');
 module.exports.run = async (client, message, args) => {
     const filter = m => m.author.id === message.author.id;
 
-    let type = args.shift();
+    let type = args.shift(); 
     if (args.length > 0) {
         title = args.join(" ");
 
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
                 }).then(res => {
                     console.log(res);
 
-                    if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`);
+                    if(res.length <= 0) {message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`); return;}
 
                     let searchRes = new discord.MessageEmbed()
                         .setTitle('请选择要重写的笔记')
@@ -108,7 +108,7 @@ module.exports.run = async (client, message, args) => {
                     }).then(res => {
                         console.log(res);
 
-                        if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`);
+                        if(res.length <= 0) {message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`); return;}
     
                         let searchRes = new discord.MessageEmbed()
                             .setTitle('请选择要删除的笔记')
