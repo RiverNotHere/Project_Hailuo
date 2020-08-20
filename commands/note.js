@@ -49,6 +49,8 @@ module.exports.run = async (client, message, args) => {
                 }).then(res => {
                     console.log(res);
 
+                    if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`);
+
                     let searchRes = new discord.MessageEmbed()
                         .setTitle('请选择要重写的笔记')
                         .setDescription(`有关 ${args.join('')} 的笔记（输入相应的数字来选择）`)
@@ -99,12 +101,14 @@ module.exports.run = async (client, message, args) => {
                 })
                 break;
             case 'delete':
-                if (message.member.roles.cache.has('742905684625981512')) {
+                if (message.member.roles.cache.has('742905684625981512' || '742493246738923641' || '742078123645861949')) {
                     noteModel.find({
                         noteKeyword: args.join(''),
                         draft: false
                     }).then(res => {
                         console.log(res);
+
+                        if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的笔记¯\_(ツ)_/¯`);
     
                         let searchRes = new discord.MessageEmbed()
                             .setTitle('请选择要删除的笔记')

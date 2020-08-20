@@ -15,6 +15,8 @@ module.exports.run = async (client, message, args) => {
         }).then(res => {
             console.log(res);
 
+            if(res.length <= 0) message.reply(`没有在分类 ${cate} 中找到有关 ${keywords} 的内容¯\_(ツ)_/¯`);
+
             let searchRes = new discord.MessageEmbed()
                 .setTitle('神奇海螺回应了你的请求o(^▽^)o')
                 .setDescription(`${cate} 分类中有关 ${keywords} 的笔记（输入相应的数字来选择）`)
@@ -70,6 +72,8 @@ module.exports.run = async (client, message, args) => {
             draft: false
         }).then(res => {
             console.log(res);
+
+            if(res.length <= 0) message.reply(`没有找到有关 ${keywords} 的内容¯\_(ツ)_/¯`);
 
             let searchRes = new discord.MessageEmbed()
                 .setTitle('神奇海螺回应了你的请求o(^▽^)o')
