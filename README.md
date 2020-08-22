@@ -4,7 +4,7 @@
 
 Welcome to Project Hailuo!
 
-This bot currently only have a chinese version and I'm currently working on a english one
+This bot currently only have a chinese version and I'm working on a english one
 
 If you are interested in this bot and want to make it better, feel free to fork this repository o(^▽^)o.
 
