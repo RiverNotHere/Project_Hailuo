@@ -27,6 +27,6 @@ If you like it, please leave a star(´▽｀)
 
 ---
 
-<u>Contact Info:</u>
+**Contact Info:**
 
 via Email: gyoushijie@gmail.com

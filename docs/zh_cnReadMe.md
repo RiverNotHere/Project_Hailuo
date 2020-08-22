@@ -26,6 +26,6 @@
 
 ---
 
-<u>联系信息：</u>
+**联系信息：**
 
-**Email:** gyoushijie@gmail.com
+Email: gyoushijie@gmail.com
